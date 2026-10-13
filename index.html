@@ -4,131 +4,107 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Negro, pagate una página como esta</title>
+<meta name="description" content="Desgracia tras desgracia. #ARGENSIMIA. La página de tutuuvlog.">
 <style>
 :root{--bg:#0b0b0c;--fg:#f4f1ea;--hot:#ff3b1f}
 *{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:6vw 16px;position:relative}
 .hero small{letter-spacing:.3em;text-transform:uppercase;opacity:.6;font-size:.8rem;margin-bottom:2vw}
 h1{font-size:clamp(3rem,13vw,12rem);line-height:.88;font-weight:900;letter-spacing:-.05em;text-transform:uppercase}
 h1 span{color:var(--hot);display:inline-block;transform:rotate(-2deg);transition:transform .2s}
 h1 span:hover{transform:rotate(3deg) scale(1.05)}
-.sub{margin-top:3vw;font-size:clamp(1rem,2vw,1.5rem);max-width:40ch;opacity:.8}
+.sub{margin-top:3vw;font-size:clamp(1rem,2vw,1.5rem);max-width:40ch;opacity:.85}
 .cta{margin-top:2vw;align-self:flex-start;background:var(--hot);color:#fff;padding:1rem 2rem;border-radius:99px;font-weight:800;text-decoration:none;font-size:1.1rem;transition:transform .15s}
 .cta:hover{transform:scale(1.08) rotate(-2deg)}
 .marquee{background:var(--hot);color:#000;font-weight:900;text-transform:uppercase;white-space:nowrap;overflow:hidden;padding:.7rem 0;font-size:1.3rem}
-.marquee div{display:inline-block;animation:m 60s linear infinite}
+.marquee div{display:inline-block;animation:m 40s linear infinite}
 @keyframes m{to{transform:translateX(-50%)}}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;padding:16px;max-width:1500px;margin:auto}
-.card{aspect-ratio:1/1.05;border-radius:var(--r,14px);padding:20px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .2s;cursor:default;overflow:hidden}
-.card:hover{transform:translateY(-6px) rotate(-1deg)}
-.card b{font-size:1.7rem;letter-spacing:-.03em;line-height:1}
-.card i{font-style:normal;font-size:.75rem;opacity:.7;text-transform:uppercase;letter-spacing:.1em}
-.card u{text-decoration:none;align-self:flex-start;padding:.45rem .9rem;border-radius:var(--r,99px);font-size:.8rem;font-weight:700}
-h2{text-align:center;font-size:clamp(1.5rem,4vw,3rem);padding:8vw 16px 2vw;letter-spacing:-.04em;text-transform:uppercase}
-footer{text-align:center;padding:8vw 16px;opacity:.6}
-footer strong{display:block;font-size:clamp(1.5rem,5vw,4rem);color:var(--hot);opacity:1;margin-bottom:1rem;text-transform:uppercase;letter-spacing:-.04em}
+.stats{display:flex;flex-wrap:wrap;gap:2rem 4rem;padding:8vw 16px 2vw;max-width:1200px;margin:auto}
+.stats div b{display:block;font-size:clamp(2.5rem,7vw,6rem);letter-spacing:-.05em;line-height:1}
+.stats div span{opacity:.6;text-transform:uppercase;letter-spacing:.15em;font-size:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;padding:2vw 16px 4vw;max-width:1200px;margin:auto}
+.chips span{border:2px solid var(--fg);border-radius:99px;padding:.5rem 1.1rem;font-weight:800;text-transform:uppercase;font-size:.85rem}
+.chips span:nth-child(odd){background:var(--fg);color:#000}
+h2{padding:6vw 16px 2vw;max-width:1200px;margin:auto;font-size:clamp(1.8rem,5vw,4rem);letter-spacing:-.04em;text-transform:uppercase}
+.post{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(1rem,4vw,4rem);align-items:center;padding:clamp(2rem,6vw,5rem) max(16px,calc((100vw - 1200px)/2));background:var(--pbg);color:var(--pfg);font-family:var(--pf,system-ui)}
+.post:nth-of-type(even) .ph{order:2}
+.ph{position:relative}
+.ph img{width:100%;display:block;border-radius:var(--pr,12px);transform:rotate(var(--rot,-2deg));transition:transform .3s;box-shadow:0 20px 50px #0006}
+.ph img:hover{transform:rotate(0) scale(1.03)}
+.num{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;opacity:.65}
+.post h3{font-size:clamp(1.8rem,4.5vw,3.6rem);letter-spacing:-.04em;line-height:.95;margin:.6rem 0 1rem;text-transform:uppercase}
+.post p{font-size:clamp(1rem,1.6vw,1.25rem);line-height:1.5;max-width:46ch;white-space:pre-line}
+.post .tag{display:inline-block;margin-top:1.2rem;background:var(--pa);color:var(--pt);padding:.5rem 1.1rem;border-radius:var(--pr,99px);font-weight:800;font-size:.85rem;text-transform:uppercase}
+footer{text-align:center;padding:10vw 16px}
+footer strong{display:block;font-size:clamp(1.8rem,6vw,5rem);color:var(--hot);margin-bottom:1rem;text-transform:uppercase;letter-spacing:-.05em;line-height:.95}
+footer a{color:var(--fg)}
+footer p{opacity:.6}
+@media(max-width:760px){.post{grid-template-columns:1fr}.post:nth-of-type(even) .ph{order:0}}
 </style>
 </head>
 <body>
 <section class="hero">
-  <small>74 marcas · 1 sola página · 0 pesos de tu bolsillo</small>
+  <small>@tutuuvlog · #ARGENSIMIA · desgracia tras desgracia</small>
   <h1>Negro,<br><span>pagate</span><br>una página<br>como esta</h1>
-  <p class="sub">Acá abajo tenés el estilo de Apple, Ferrari, Stripe, Nintendo y 70 más. Todo en un solo lugar. Y vos con una página en Wix.</p>
-  <a class="cta" href="#modelos">Mirá lo que te perdés ↓</a>
+  <p class="sub">Los pibes de tutuuvlog, sus cumpleaños, sus despedidas y su fracaso. Todo en una página. Vos con una de Wix.</p>
+  <a class="cta" href="#posts">Ver las desgracias ↓</a>
 </section>
 <div class="marquee"><div id="mq"></div></div>
-<h2 id="modelos">Los 74 modelos</h2>
-<main class="grid" id="g"></main>
-<footer><strong>Negro, pagate una página como esta.</strong>Hecho con Claude Code · Awesome Design + Taste</footer>
+
+<section class="stats">
+  <div><b>8</b><span>publicaciones</span></div>
+  <div><b>75</b><span>seguidores</span></div>
+  <div><b>0</b><span>laburo (como todo el grupo)</span></div>
+</section>
+<h2>Historias destacadas</h2>
+<div class="chips"><span>Picardías</span><span>Turbina</span><span>Negros Aires</span><span>Genio</span><span>Rod trip</span><span>W</span><span>Cockland</span></div>
+
+<h2 id="posts">Las publicaciones</h2>
+<div id="p"></div>
+
+<footer>
+  <strong>Negro,<br>pagate una página<br>como esta.</strong>
+  <p>Contenido de <a href="https://www.instagram.com/tutuuvlog/" target="_blank" rel="noopener">@tutuuvlog</a> · Hecho con Claude Code</p>
+</footer>
+
 <script>
-// [nombre, fondo, texto, botón, radio, tipografía]
-const M=[
-["Airbnb","#fff","#222","#ff385c","14px","Helvetica,sans-serif"],
-["Airtable","#fff","#181d26","#1b61c9","12px","system-ui"],
-["Apple","#f5f5f7","#1d1d1f","#0071e3","99px","-apple-system,sans-serif"],
-["Binance","#181a20","#eaecef","#fcd535","6px","system-ui"],
-["BMW","#fff","#1c1c1c","#0066b1","0","Arial,sans-serif"],
-["BMW M","#0a0a0a","#fff","#e7222e","0","Arial,sans-serif"],
-["Bugatti","#000","#d9c9a3","#d9c9a3","0","Georgia,serif"],
-["Cal.com","#111","#fafafa","#fff","8px","system-ui"],
-["Claude","#f0eee6","#3d3929","#d97757","12px","Georgia,serif"],
-["Clay","#fff4e6","#1a1a1a","#ff5c35","20px","system-ui"],
-["ClickHouse","#151515","#faff69","#faff69","4px","system-ui"],
-["Cohere","#fff","#212121","#39594d","16px","Georgia,serif"],
-["Coinbase","#fff","#0a0b0d","#0052ff","99px","system-ui"],
-["Composio","#0d0d0d","#fff","#7c5cff","10px","system-ui"],
-["Cursor","#14120b","#edecec","#f54e00","8px","system-ui"],
-["Dell 1996","#c0c0c0","#000","#000080","0","'Times New Roman',serif"],
-["ElevenLabs","#fff","#000","#000","99px","system-ui"],
-["Expo","#000","#fff","#4630eb","10px","system-ui"],
-["Ferrari","#da291c","#fff","#000","0","Arial,sans-serif"],
-["Figma","#fff","#000","#a259ff","99px","system-ui"],
-["Framer","#000","#fff","#0099ff","12px","system-ui"],
-["HashiCorp","#fff","#000","#7b42bc","4px","system-ui"],
-["HP","#fff","#000","#0096d6","99px","system-ui"],
-["IBM","#161616","#f4f4f4","#0f62fe","0","Arial,sans-serif"],
-["Intercom","#fff","#111","#ff5600","8px","system-ui"],
-["Kraken","#5741d9","#fff","#fff","8px","system-ui"],
-["Lamborghini","#000","#ffc000","#ffc000","0","Arial,sans-serif"],
-["Linear","#08090a","#f7f8f8","#5e6ad2","6px","system-ui"],
-["Lovable","#fcfbf8","#1c1c1c","#ff4d8d","99px","system-ui"],
-["Mastercard","#f3f0ee","#141413","#eb001b","99px","system-ui"],
-["Meta","#fff","#1c2b33","#0866ff","99px","system-ui"],
-["MiniMax","#fff","#111","#f23f5d","12px","system-ui"],
-["Mintlify","#fff","#0d0d0d","#18e299","99px","system-ui"],
-["Miro","#fff","#050038","#ffd02f","8px","system-ui"],
-["Mistral","#fffaeb","#1f1f1f","#fa520f","0","'Courier New',monospace"],
-["MongoDB","#001e2b","#fff","#00ed64","99px","system-ui"],
-["Nike","#fff","#111","#111","99px","'Arial Black',Arial,sans-serif"],
-["Nintendo 2001","#e60012","#fff","#fff","18px","Verdana,sans-serif"],
-["Notion","#fff","#37352f","#2383e2","6px","Georgia,serif"],
-["NVIDIA","#000","#fff","#76b900","2px","Arial,sans-serif"],
-["Ollama","#fff","#000","#000","12px","system-ui"],
-["OpenCode","#0b0b0b","#d4d4d4","#fab283","2px","'Courier New',monospace"],
-["Pinterest","#fff","#111","#e60023","99px","system-ui"],
-["PlayStation","#003791","#fff","#0070d1","99px","system-ui"],
-["PostHog","#eeefe9","#151515","#f54e00","6px","system-ui"],
-["Raycast","#07080a","#f9f9f9","#ff6363","10px","system-ui"],
-["Renault","#ffcc33","#000","#000","0","Arial,sans-serif"],
-["Replicate","#fff","#000","#000","4px","system-ui"],
-["Resend","#000","#fff","#fff","8px","system-ui"],
-["Revolut","#fff","#191c1f","#0666eb","99px","system-ui"],
-["Runway","#000","#fff","#fff","99px","system-ui"],
-["Sanity","#0b0b0b","#fff","#f36458","6px","system-ui"],
-["Sentry","#1d1127","#fff","#7553ff","6px","system-ui"],
-["Shopify","#000","#fff","#95bf47","99px","system-ui"],
-["Slack","#4a154b","#fff","#ecb22e","8px","system-ui"],
-["SpaceX","#000","#fff","#fff","0","'Arial Narrow',Arial,sans-serif"],
-["Spotify","#121212","#fff","#1ed760","99px","system-ui"],
-["Starbucks","#1e3932","#fff","#00a862","99px","Georgia,serif"],
-["Stripe","#0a2540","#fff","#635bff","99px","system-ui"],
-["Supabase","#1c1c1c","#ededed","#3ecf8e","6px","system-ui"],
-["Superhuman","#1b1b3a","#fff","#ae8cff","99px","system-ui"],
-["Tesla","#fff","#171a20","#3e6ae1","4px","system-ui"],
-["The Verge","#131313","#fff","#3cffd0","0","'Arial Black',sans-serif"],
-["Together AI","#fff","#010120","#0f6fff","99px","system-ui"],
-["Uber","#000","#fff","#fff","8px","system-ui"],
-["Vercel","#000","#fff","#fff","6px","system-ui"],
-["Vodafone","#e60000","#fff","#fff","99px","Arial,sans-serif"],
-["VoltAgent","#101010","#fff","#00d992","6px","system-ui"],
-["Warp","#01a4ff","#fff","#fff","8px","system-ui"],
-["Webflow","#146ef5","#fff","#fff","4px","system-ui"],
-["WIRED","#fff","#000","#000","0","Georgia,serif"],
-["Wise","#163300","#fff","#9fe870","99px","system-ui"],
-["xAI","#000","#fff","#fff","0","'Courier New',monospace"],
-["Zapier","#fff4eb","#201515","#ff4f00","6px","system-ui"]
+// Cada publicación con el estilo de una marca: [fondo, texto, acento, texto acento, radio, tipografía]
+const P=[
+ {img:'p1',t:'El peor video del mundo',tag:'Reel',s:['#e60012','#fff','#fff','#e60012','18px','Verdana,sans-serif'],
+  c:'Es el peor video del mundo pero representa lo nefasto que somos como seres humanos.'},
+ {img:'p2',t:'#2 I used to rule the world',tag:'Carrusel',s:['#121212','#fff','#1ed760','#000','99px','system-ui'],
+  c:'I used to rule the world\nSeas would rise when I gave the word\nNow in the morning, I sleep alone\nSweep the streets I used to own'},
+ {img:'p3',t:'La tutuca mayor cumple 24',tag:'Cumpleaños',s:['#f0eee6','#3d3929','#d97757','#fff','12px','Georgia,serif'],
+  c:'El cumpleaños de la tutuca mayor (fue hace 2 días) (el cm no labura) (como todo el grupo). Lamentablemente acabado, washed, retirado, senil, pero es lo que hay. 24 años de puras desgracias y vamos por más. Feliz cumpleaños al sobrecito de ketchup que tanto queremos 😮‍💨🎉🥳🍾'},
+ {img:'p4',t:'Post #2 del GOAT',tag:'Despedida',s:['#da291c','#fff','#000','#fff','0','Arial,sans-serif'],
+  c:'No queríamos despedirte así nomás, así que te dejamos unos recuerdos de argensimia para que no vuelvas a la miseria de lo que fue Gesell y las giras de mierda. GRACIAS TOTALES.'},
+ {img:'p5',t:'Se va la cabra',tag:'Despedida',s:['#08090a','#f7f8f8','#5e6ad2','#fff','6px','system-ui'],
+  c:'Hoy toca despedir a la cabra, al gordo, al pelado, un pilar fundamental de los tutucas, uno de los fundadores del tutuquismo y del fracaso. Vola alto gordo 🕊️ (se va a España, no sabemos cuánto tiempo). Así que acá van unas fotos y videos de este kukardo, para que disfruten un rato.'},
+ {img:'p6',t:'Rodri, Casper, Fraca',tag:'Cumpleaños',s:['#0a2540','#fff','#635bff','#fff','99px','system-ui'],
+  c:'Hoy cumple años uno de los fundadores y partícipes de esta desgracia. Es conocido como Rodri, Casper, Fraca y por estar viviendo una vida de excesos en Nueva Zelanda. Le mandamos un buen beso en la sin hueso 🍆🙏🏻🔥'},
+ {img:'p7',t:'La sonrisa optimista del grupo',tag:'Cumpleaños',s:['#ffc000','#000','#000','#ffc000','0','Arial,sans-serif'],
+  c:'Hoy es el cumpleaños de Martín, la sonrisa optimista del grupo. Es caracterizado por su carácter a la hora de organizar partidos o juntadas, pero cuando hay que salir es el primero en poner una sonrisa y buscar mujeres. Adicto al mal fútbol y tweeter.\nPedí perdón por tan poco y agradecé a estos fracasados como amigos.\n— TUTUVLOG'},
+ {img:'p8',t:'Tweety',tag:'Viaje',s:['#146ef5','#fff','#fff','#146ef5','4px','system-ui'],
+  c:'TWEETY'}
 ];
-function lum(h){h=h.replace('#','');if(h.length===3)h=h.split('').map(x=>x+x).join('');const[r,g,b]=[0,2,4].map(i=>parseInt(h.substr(i,2),16));return(0.299*r+0.587*g+0.114*b)/255}
-const g=document.getElementById('g');
-M.forEach(([n,bg,fg,bt,r,f],i)=>{
-  const c=document.createElement('div');c.className='card';
-  c.style.cssText='background:'+bg+';color:'+fg+';font-family:'+f+';--r:'+r;
-  c.innerHTML='<i>Nº '+String(i+1).padStart(2,'0')+'</i><b>'+n+'</b><u style="background:'+bt+';color:'+(lum(bt)>0.55?'#000':'#fff')+'">Pagate esto</u>';
-  g.appendChild(c);
+const root=document.getElementById('p');
+P.forEach((x,i)=>{
+ const [bg,fg,ac,at,r,f]=x.s;
+ const s=document.createElement('section');s.className='post';
+ s.style.cssText='--pbg:'+bg+';--pfg:'+fg+';--pa:'+ac+';--pt:'+at+';--pr:'+r+';--pf:'+f+';--rot:'+(i%2?2:-2)+'deg';
+ const ph=document.createElement('div');ph.className='ph';
+ const im=document.createElement('img');im.src='img/'+x.img+'.jpg';im.alt=x.t;im.loading='lazy';ph.appendChild(im);
+ const tx=document.createElement('div');
+ const n=document.createElement('div');n.className='num';n.textContent='Nº '+String(i+1).padStart(2,'0');
+ const h=document.createElement('h3');h.textContent=x.t;
+ const p=document.createElement('p');p.textContent=x.c;
+ const tg=document.createElement('span');tg.className='tag';tg.textContent=x.tag;
+ tx.append(n,h,p,tg);s.append(ph,tx);root.appendChild(s);
 });
-const t=M.map(m=>m[0]).join(' ✦ ')+' ✦ ';
-document.getElementById('mq').textContent=t+t;
+const t='TUTUVLOG ✦ #ARGENSIMIA ✦ DESGRACIA TRAS DESGRACIA ✦ TUTUQUISMO ✦ EL CM NO LABURA ✦ ';
+document.getElementById('mq').textContent=t.repeat(6);
 </script>
 </body>
 </html>
